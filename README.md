@@ -10,6 +10,8 @@ $$ T(n) =
         T\left(\frac{n}{13}\right) + 5 & n > 1
     \end{cases}
 $$
+$T(n) = T(\frac{n}{13}) + 5$
+$= T(\frac{n}{13^2} + 5) + 5$
 
 2.
 $$ T(n) =
