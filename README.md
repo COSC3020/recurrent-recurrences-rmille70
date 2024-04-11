@@ -33,13 +33,17 @@ $$
 
 $T(n) = 13T(\frac{n}{13}) + 5$
 
-$T(n) = 13^2T(\frac{n}{13^2}) + 5 + 5$
+$T(n) = 13^2T(\frac{n}{13^2}) + 5(13) + 5$
 
-$T(n) = 13^3T(\frac{n}{13^3}) + 5 + 5 + 5$
+$T(n) = 13^3T(\frac{n}{13^3}) + 5(13^2) + 5(13) + 5$
 
-$T(n) = 13^iT(\frac{n}{13^i}) + 5i$    { where $i = \log_{13}(n)$ }
+$T(n) = 13^iT(\frac{n}{13^i}) + 5\sum\limits_{j=0}^{i-1} 13^j$    { where $i = \log_{13}(n)$ }
 
-$T(n) = n + 5\log_{13}(n)$
+$T(n) = n + 5(\frac{1-13^{\log_{13}(n)}}{1-13})$
+
+$T(n) = n + 5(\frac{1-13^{\log_{13}(n)}}{1-13})$
+
+$T(n) = n + \frac{5n-5}{12}$
 
 Thus the complexity is $\Theta(\log_{13}(n))$ since n is the leading term.
 
@@ -57,9 +61,9 @@ $T(n) = 13(13T(\frac{n}{13^2}) + 2(\frac{n}{13})) + 2n$
 
 $T(n) = 13(13(13T(\frac{n}{13^3}) + 2(\frac{n}{13^2})) + 2(\frac{n}{13})) + 2n$
 
-$T(n) = 13^3T(\frac{n}{13^3}) + 2(13^2)(\frac{n}{13^2}) + 2(13)(\frac{n}{13}) + 2n$
+$T(n) = 13^3T(\frac{n}{13^3}) + 2(13^2)(\frac{2}{13^2}) + 2(13)(\frac{n}{13}) + 2n$
 
-$T(n) = 13^iT(\frac{n}{13^i}) + 2\sum\limits_{j=0}^{i-1} \frac{n}{13^j}$
+$T(n) = 13^iT(\frac{n}{13^i}) + 2n\sum\limits_{j=0}^{i-1} \frac{1}{13^j}$    { where $i = \log_{13}(n)$ }
 
 $T(n) = n + 2(\frac{1-(\frac{1}{13})^{\log_{13}(n)}}{1-\frac{1}{13}})$
 
