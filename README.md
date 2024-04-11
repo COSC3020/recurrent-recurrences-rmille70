@@ -45,7 +45,7 @@ $T(n) = n + 5(\frac{1-13^{\log_{13}(n)}}{1-13})$
 
 $T(n) = n + \frac{5n-5}{12}$
 
-Thus the complexity is $\Theta(\log_{13}(n))$ since n is the leading term.
+Thus the complexity is $\Theta(n)$ since n is the leading term.
 
 3.
 $$ T(n) =
@@ -69,4 +69,4 @@ $T(n) = 13^iT(\frac{n}{13^i}) + 2n(i)$    { where $i = \log_{13}(n)$ }
 
 $T(n) = n + 2n\log_{13}(n)$
 
-Thus the complexity is $\Theta(\log_{13}(n))$
+Thus the complexity is $\Theta(n\log_{13}(n))$ since $2n\log_{13}(n)$ is the leading term.
