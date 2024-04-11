@@ -13,13 +13,17 @@ $$
 
 $T(n) = T(\frac{n}{13}) + 5$
 
-$T(n) = T(\frac{n}{13^2}) + \frac{5}{13} + 5$
+$T(n) = T(\frac{n}{13^2}) + 5 + 5$
 
-$T(n) = T(\frac{n}{13^3}) + \frac{5}{13^2} +\frac{5}{13} + 5$
+$T(n) = T(\frac{n}{13^3}) + 5 + 5 + 5$
 
-$T(n) = T(\frac{n}{13^i}) + \sum\limits_{j=0}^{i-1} \frac{5}{13^j}$    { where $i = \log_{13}(n)$ }
+$T(n) = T(\frac{n}{13^i}) + i5$    { where $i = \log_{13}(n)$ }
 
-$T(n) = 1 + \frac{5}{13^2} +\frac{5}{13} + 5$
+$T(n) = 1 + 5(\log_{13}(n))$
+
+$T(n) = 1 + \frac{65-5\log_{13}(n)}{12}$
+
+Thus the completity is $\Theta(\log_13(n))$
 
 2.
 $$ T(n) =
@@ -28,6 +32,7 @@ $$ T(n) =
         13 T\left(\frac{n}{13}\right) + 5 & n > 1
     \end{cases}
 $$
+
 
 3.
 $$ T(n) =
