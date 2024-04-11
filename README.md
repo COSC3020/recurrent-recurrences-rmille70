@@ -17,7 +17,9 @@ $T(n) = T(\frac{n}{13^2}) + \frac{5}{13} + 5$
 
 $T(n) = T(\frac{n}{13^3}) + \frac{5}{13^2} +\frac{5}{13} + 5$
 
-$T(n) = T(\frac{n}{13^i}) + \sum\limits_{j=0}^{i-1}$    { $i = \log_{13}(n)$ }
+$T(n) = T(\frac{n}{13^i}) + \sum\limits_{j=0}^{i-1} \frac{5}{13^j}$    { where $i = \log_{13}(n)$ }
+
+$T(n) = 1 + \frac{5}{13^2} +\frac{5}{13} + 5$
 
 2.
 $$ T(n) =
