@@ -21,9 +21,7 @@ $T(n) = T(\frac{n}{13^i}) + i5$    { where $i = \log_{13}(n)$ }
 
 $T(n) = 1 + 5(\log_{13}(n))$
 
-$T(n) = 1 + \frac{65-5\log_{13}(n)}{12}$
-
-Thus the completity is $\Theta(\log_13(n))$
+Thus the completity is $\Theta(\log_{13}(n))$
 
 2.
 $$ T(n) =
